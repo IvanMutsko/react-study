@@ -1,16 +1,17 @@
-export const App = () => {
+import PaintingList from './PaintingList';
+import paintings from '../paintings.json';
+import Section from './Section';
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Section title="Top image">
+        <PaintingList items={paintings} />
+      </Section>
+      <Section title="New image">
+        <PaintingList items={paintings} />
+      </Section>
     </div>
   );
-};
+}
+
